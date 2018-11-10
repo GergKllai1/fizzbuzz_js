@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FizzBuzz</title>
-    <script src="./js/fizz_buzz.js"></script>
+    <script src="./src/js/fizz_buzz.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="value">
-    <input type="submit" value="Check" id="button">
-    <div id="display_anwser"></div>
+    
+    <div class='form'>
+        <h1>FizzBuzz Game</h1>
+        <img src="./images/image1.jpg" alt="No image avaliable" srcset="">
+        <div class = 'submission'>
+            <input type="text" id="value">
+            <input type="submit" value="Check" id="button">
+        </div>
+
+    </div>
+    <div id="display_anwser">
+    </div>
+    <div class="choices">
+        <button>Fizz</button>
+        <button>Buzz</button>
+        <button>FizzBuzz</button>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
