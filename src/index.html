@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FizzBuzz</title>
+    <script src="./js/fizz_buzz.js"></script>
 </head>
 <body>
     <input type="text" id="value">
-    <input type="sumbit" value="Check" id="button">
+    <input type="submit" value="Check" id="button">
     <div id="display_anwser"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        let button = document.getElementById('button')
+        let displayDiv = document.getElementById('display_anwser')
+        button.addEventListener('click' , () => {
+            let value = document.getElementById('value').value
+            let fizzBuzz = new FizzBuzz
+            let result = fizzBuzz.check(value)
+            displayDiv.innerHTML = result;
+        })
+    })
+    </script>
 </body>
 </html>
