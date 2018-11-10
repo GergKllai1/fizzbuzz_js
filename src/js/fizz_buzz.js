@@ -27,13 +27,14 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     let buzz = document.getElementById('buzz');
     let fizzbuzz = document.getElementById('fizzbuzz');
     let fizzBuzz = new FizzBuzz
-    let points = parseInt(document.getElementById('points').innerHTML)
-    fizz.addEventListener('click', () => {
+    let score = document.getElementById('points')
+    let points = parseInt(score.innerHTML)
+    fizz.addEventListener('click', function() {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "Fizz"){
             randomInput.innerHTML = randomGenerator()
-            
+            score.innerHTML = points += 1
         }else{
             alert(`No sorry, it's ${anwser}`)
         };
