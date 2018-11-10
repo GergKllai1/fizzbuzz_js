@@ -9,7 +9,7 @@ class FizzBuzz {
         } else if(number % 3 === 0) {
             return 'Fizz'
         } else {
-            return number
+            return 'neither of them'
         }
     }
 }
@@ -23,6 +23,19 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     let neither = document.getElementById('neither');
     let fizzBuzz = new FizzBuzz;
     let score = document.getElementById('points');
+    let counter = document.getElementById('counter');
+    let startTimer = function(){
+        counter.innerHTML = 5
+    setInterval(function (){
+        let i = parseInt(counter.innerHTML)
+        i --
+        if(i >= 0){
+            counter.innerHTML = i
+        } if(i === 0){
+            clearInterval(i);
+        }
+        }, 1000);
+    }
     let randomGenerator = function () {
         randomInput.innerHTML= Math.floor(Math.random() * 100)
     };
@@ -35,7 +48,8 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
         score.innerHTML = 0
     }
     generator.addEventListener('click', () => {
-        randomGenerator();
+        randomGenerator()
+        startTimer();
     });
     fizz.addEventListener('click', function() {
         let value = document.getElementById('random').innerHTML
@@ -80,7 +94,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
             randomGenerator()
             increaseScore()
         }else{
-            alert(`No sorry, it was neither of them.`)
+            alert(`No sorry, it's neither of them.`)
             resetScore()
             randomGenerator()
         };;
