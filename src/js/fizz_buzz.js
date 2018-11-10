@@ -23,41 +23,37 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     generator.addEventListener('click', () => {
         randomInput.innerHTML = randomGenerator();
     })
-})
-
-const solution = document.addEventListener('DOMContentLoaded', () => {
     let fizz = document.getElementById('fizz');
     let buzz = document.getElementById('buzz');
     let fizzbuzz = document.getElementById('fizzbuzz');
     let fizzBuzz = new FizzBuzz
+    let points = parseInt(document.getElementById('points').innerHTML)
     fizz.addEventListener('click', () => {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "Fizz"){
-            alert("Congratulations you answered correctly!")
+            randomInput.innerHTML = randomGenerator()
+            
         }else{
-            alert('You have lost, try again!')
+            alert(`No sorry, it's ${anwser}`)
         };
-        
     });
     buzz.addEventListener('click', () => {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "Buzz"){
-            alert("Congratulations you answered correctly!")
+            randomInput.innerHTML = randomGenerator()
         }else{
-            alert('You have lost, try again!')
+            alert(`No sorry, it's ${anwser}`)
         };
-        
     });
     fizzbuzz.addEventListener('click', () => {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "FizzBuzz"){
-            alert("Congratulations you answered correctly!")
+            randomInput.innerHTML = randomGenerator()
         }else{
-            alert('You have lost, try again!')
+            alert(`No sorry, it's ${anwser}`)
         };;
-        
     })
 })
