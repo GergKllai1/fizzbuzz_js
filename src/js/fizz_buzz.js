@@ -26,6 +26,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     let fizz = document.getElementById('fizz');
     let buzz = document.getElementById('buzz');
     let fizzbuzz = document.getElementById('fizzbuzz');
+    let neither = document.getElementById('neither')
     let fizzBuzz = new FizzBuzz
     let score = document.getElementById('points')
     let points = parseInt(score.innerHTML)
@@ -37,24 +38,40 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
             score.innerHTML = points += 1
         }else{
             alert(`No sorry, it's ${anwser}`)
+            score.innerHTML = 0
         };
     });
-    buzz.addEventListener('click', () => {
+    buzz.addEventListener('click', function() {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "Buzz"){
             randomInput.innerHTML = randomGenerator()
+            score.innerHTML = points += 1
         }else{
             alert(`No sorry, it's ${anwser}`)
+            this.score.innerHTML = 0
         };
     });
-    fizzbuzz.addEventListener('click', () => {
+    fizzbuzz.addEventListener('click', function() {
         let value = document.getElementById('random').innerHTML
         let anwser = fizzBuzz.check(value);
         if(anwser === "FizzBuzz"){
             randomInput.innerHTML = randomGenerator()
+            this.score.innerHTML = points += 1
         }else{
             alert(`No sorry, it's ${anwser}`)
+            score.innerHTML = 0
         };;
-    })
+    });
+    neither.addEventListener('click', function() {
+        let value = document.getElementById('random').innerHTML
+        let anwser = fizzBuzz.check(value);
+        if(anwser !== "Fizz" && anwser !== "Buzz" && anwser !=="FizzBuzz" ){
+            randomInput.innerHTML = randomGenerator()
+            score.innerHTML = points += 1
+        }else{
+            alert(`No sorry, it was neither of them.`)
+            this.score.innerHTML = 0
+        };;
+    });
 })
