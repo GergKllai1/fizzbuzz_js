@@ -1,6 +1,6 @@
 class FizzBuzz {
     check(number) {
-        if(number === 0 ){
+        if(number === ' ' ){
             return 'Please choose a number'
         } else if(number % 15 === 0) {
             return 'FizzBuzz'
@@ -25,7 +25,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     let score = document.getElementById('points');
     let counter = document.getElementById('counter');
     let startTimer = function(){
-        counter.innerHTML = 5
+        counter.innerHTML = 60
     setInterval(function (){
         let i = parseInt(counter.innerHTML)
         i --
@@ -33,6 +33,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
             counter.innerHTML = i
         } if(i === 0){
             clearInterval(i);
+            alert(`Game over! Your score is ${score.innerHTML}`)
         }
         }, 1000);
     }
@@ -49,7 +50,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     }
     generator.addEventListener('click', () => {
         randomGenerator()
-        startTimer();
+        startTimer()
     });
     fizz.addEventListener('click', function() {
         let value = document.getElementById('random').innerHTML
