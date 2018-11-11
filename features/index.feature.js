@@ -8,19 +8,29 @@ describe('User can input a value and get FizzBuzz results', () => {
         await browser.visitPage('http://localhost:8080/')
     });
 
-    beforeEach(async () => {
-        await browser.page.reload();
-    });
-
     after(async () => {
         await browser.close();
     })
 
-    it('clicking on "Check" button', async () => {
-        await browser.fillIn("input[id='value']", { with: '3'})
-        await browser.clickOnButton("input[value='Check']")
-        let content = await browser.getContent("[id='display_anwser']")
-        expect(content).to.eql('Fizz');
+    it('starts timer when clicking on "Start Game" button', async () => {
+        await browser.clickOnButton("button[id='generator']")
+        let content = await browser.getContent("[id=counter")
+        expect(content).to.eql('60')
     })
+
+    it('generates random number when clicking on "Start Game" button', async () => {
+        await browser.clickOnButton("button[id='generator']")
+        let content = await browser.getContent("[id=random")
+        expect(content).not.to.eql(0)
+    });
+
+    it('increases score when anwsering right', async () => {
+        let content = await browser.getContent("[id=random")
+        let score = await browser.getContent("[id=points]")
+
+        await browser.clickOnButton("button[id='fizz']", setNumber())
+        expect(score).to.eql('1')
+    });
+
 
 })
