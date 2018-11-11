@@ -1,6 +1,9 @@
 # FizzBuzz Game
 ###### Created by Gregory Kallai
 
+#### Thank you for checking out my FizzBuzz game. Here you can find the link for the website:
+[FizzBuzz Game](https://gergkllai1.github.io/fizzbuzz_js/)
+
 ##### We all know and love the kids' game fizzbuzz. The rules are quite simple:
 - If you say a number divisible by 3 you say Fizz
 - If you say a number divisible by 5 you say Buzz
