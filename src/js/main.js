@@ -79,7 +79,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
             randomGenerator()
             increaseScore()
         }else{
-            alert(`No sorry, it's neither of them.`)
+            alert(`No sorry, it's ${anwser}`)
             resetScore()
             randomGenerator()
         };;
