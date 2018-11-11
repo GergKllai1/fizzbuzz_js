@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FizzBuzz</title>
-    <script src="./src/js/fizz_buzz.js"></script>
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     
     <div class='form'>
-        <h1>FizzBuzz Game</h1>
-        <img src="./images/image1.jpg" alt="No image avaliable" srcset="">
-        <br>
-        <div class = 'submission flex flex-colum'>
-            <input type="text" id="value">
-            <input type="submit" value="Check" id="button">
+        <h1>The FizzBuzz Game</h1>
+        <h3>This is a more challenging version of the popular kids' game: FizzBuzz</h3>
+        <h3>The rules are simple:</h3>
+        <div class="rules">
+            <p>For every number divisable by 3 you have to say Fizz</p>
+            <p>For every number divisable by 5 you have to say Buzz</p>
+            <p>For every number divisable by both 3 and 5 you have to say FizzBuzz</p>
         </div>
-    <div id="display_anwser">
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        let button = document.getElementById('button')
-        let displayDiv = document.getElementById('display_anwser')
-        button.addEventListener('click' , () => {
-            let value = document.getElementById('value').value
-            let fizzBuzz = new FizzBuzz
-            let result = fizzBuzz.check(value)
-            displayDiv.innerHTML = result;
-        })
-    })
-    </script>
+        <img src="./images/image1.jpg" alt="No image avaliable" srcset="">
+        <div class = 'submission'>
+            <button class ="bg-green hover:bg-green-dark text-white font-bold py-2 px-8 rounded-full text-xl" id='generator'>Start Game!</button>
+            <br>
+            <label for="counter">Time left:</label>
+            <div id='counter'>0</div>
+            <br>
+            <label for="points">Current score</label>
+            <div id="points">0</div>
+            <br>
+            <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id="fizz">Fizz</button>
+            <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='buzz'>Buzz</button>
+            <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='fizzbuzz'>FizzBuzz</button>
+            <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='neither'>Neither</button>
+            <div id="random"></div>
+            </div>
+        </div>
+    <script src="./src/js/fizz_buzz.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 </html>
