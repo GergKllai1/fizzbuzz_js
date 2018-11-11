@@ -8,9 +8,9 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
     let fizzBuzz = new FizzBuzz;
     let score = document.getElementById('points');
     let counter = document.getElementById('counter');
-    let startTimer = function(){
+    let startTimer = () => {
         counter.innerHTML = 60
-    setInterval(function (){
+    setInterval( () => {
         let i = parseInt(counter.innerHTML)
         i --
         if(i >= 0){
@@ -21,67 +21,67 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
         }
         }, 1000);
     }
-    let randomGenerator = function () {
+    let randomGenerator = () => {
         randomInput.innerHTML= Math.floor(Math.random() * 1000)
     };
-    let increaseScore = function() {
+    let increaseScore = () => {
         let points = parseInt(score.innerHTML)
         points += 1
         score.innerHTML = points
     };
-    let resetScore = function (){
+    let resetScore = () => {
         score.innerHTML = 0
     }
     generator.addEventListener('click', () => {
         randomGenerator()
         startTimer()
     });
-    fizz.addEventListener('click', function() {
-        let value = document.getElementById('random').innerHTML
+    fizz.addEventListener('click', () => {
+        let value = document.getElementById('random').innerHTML;
         let anwser = fizzBuzz.check(value);
         if(anwser === "Fizz"){
-            randomGenerator()
-            increaseScore()
+            randomGenerator();
+            increaseScore();
         }else{
             alert(`No sorry, it's ${anwser}`)
             resetScore()
             randomGenerator()
         };
     });
-    buzz.addEventListener('click', function() {
-        let value = document.getElementById('random').innerHTML
+    buzz.addEventListener('click', () => {
+        let value = document.getElementById('random').innerHTML;
         let anwser = fizzBuzz.check(value);
         if(anwser === "Buzz"){
-            randomGenerator()
-            increaseScore()
+            randomGenerator();
+            increaseScore();
         }else{
             alert(`No sorry, it's ${anwser}`)
             resetScore()
             randomGenerator()
         };
     });
-    fizzbuzz.addEventListener('click', function() {
-        let value = document.getElementById('random').innerHTML
+    fizzbuzz.addEventListener('click', () => {
+        let value = document.getElementById('random').innerHTML;
         let anwser = fizzBuzz.check(value);
         if(anwser === "FizzBuzz"){
-            randomGenerator()
-            increaseScore()
+            randomGenerator();
+            increaseScore();
         }else{
             alert(`No sorry, it's ${anwser}`)
             resetScore()
             randomGenerator()
         };;
     });
-    neither.addEventListener('click', function() {
-        let value = document.getElementById('random').innerHTML
+    neither.addEventListener('click', () => {
+        let value = document.getElementById('random').innerHTML;
         let anwser = fizzBuzz.check(value);
         if(anwser !== "Fizz" && anwser !== "Buzz" && anwser !=="FizzBuzz"){
-            randomGenerator()
-            increaseScore()
+            randomGenerator();
+            increaseScore();
         }else{
             alert(`No sorry, it's ${anwser}`)
-            resetScore()
-            randomGenerator()
+            resetScore();
+            randomGenerator();
         };;
     });
 })

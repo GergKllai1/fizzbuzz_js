@@ -1,8 +1,6 @@
 class FizzBuzz {
     check(number) {
-        if(number === ' ' ){
-            return 'Please choose a number'
-        } else if(number % 15 === 0) {
+        if(number % 15 === 0) {
             return 'FizzBuzz'
         } else if(number % 5 === 0) {
             return 'Buzz'
@@ -12,5 +10,4 @@ class FizzBuzz {
             return 'neither of them'
         }
     }
-}
-
+};

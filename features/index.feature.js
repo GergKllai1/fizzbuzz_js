@@ -12,11 +12,6 @@ describe('User can input a value and get FizzBuzz results', () => {
     after(async () => {
         await browser.close();
     })
-
-   /* beforeEach(async () => {
-        await browser.page.reload();
-    })*/
-
     it('starts timer when clicking on "Start Game" button', async () => {
         await browser.clickOnButton("button[id='generator']")
         let content = await browser.getContent("[id=counter")
