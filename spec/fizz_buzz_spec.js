@@ -4,7 +4,7 @@ describe('Fizz Buzz', () => {
     let fizzBuzz = new FizzBuzz
 
     it('returns a number if no game rules are met', () =>{
-        expect(fizzBuzz.check(1)).to.eql(1)
+        expect(fizzBuzz.check(1)).to.eql('neither of them')
     });
 
     it('returns Fizz if number is divisible by 3', () => {
