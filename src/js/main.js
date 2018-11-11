@@ -22,7 +22,7 @@ const randomizer = document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
     let randomGenerator = function () {
-        randomInput.innerHTML= Math.floor(Math.random() * 100)
+        randomInput.innerHTML= Math.floor(Math.random() * 1000)
     };
     let increaseScore = function() {
         let points = parseInt(score.innerHTML)
