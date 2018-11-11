@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FizzBuzz</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>The FizzBuzz Game</h1>
+    <img src="./images/image1.jpg" alt="No image avaliable" srcset="">
+    <div id="rules">
+    <p>The rules are simple:</p>
+    <p>For every number <strong>divisible by 3</strong> you have to say <strong>Fizz</strong></p>
+    <p>For every number <strong>divisible by 5</strong> you have to say <strong>Buzz</strong></p>
+    <p>For every number <strong>divisible by both 3 and 5</strong> you have to say <strong>FizzBuzz</strong></p>
+    <p>You have <strong>60 seconds</strong> to get as many as you can right. But beware! </p>
+    <p><strong> If you mess it up you will lose all points! </strong></p>
+    </div>
+    <div>
+        <button class ="bg-green hover:bg-green-dark text-white font-bold py-2 px-8 rounded-full text-xl mb-5" id='generator'>Start Game!</button>
+        <br>
+        <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id="fizz">Fizz</button>
+        <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='buzz'>Buzz</button>
+        <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='fizzbuzz'>FizzBuzz</button>
+        <button class = "bg-green hover:bg-green-dark text-white font-bold py-1 px-4 rounded-full" id='neither'>Neither</button>
+    </div>
+    <div id="random" class="bg-green text-white font-bold py-2 px-4 rounded-full"></div>
+    <label for="counter">Time left:</label>
+    <div id='counter'>0</div>
+    <label for="points">Score</label>
+    <div id="points">0</div>
+<script src="./src/js/fizz_buzz.js"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
